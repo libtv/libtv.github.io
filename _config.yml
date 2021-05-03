@@ -70,12 +70,12 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: ICCHOI
-repo: develog
+username: libtv
+repo: libtv.github.io
 branch: master
-relative_source: ../develog/
+relative_source: 
 destination: ./output/
-production_url:  https://icchoi.github.io/develog/
+production_url:  https://libtv.github.io/
 
 exclude:
   - assets/css
