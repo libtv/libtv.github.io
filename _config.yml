@@ -10,8 +10,8 @@ words_per_minute: 200
 baseurl: /
 
 # Website info
-title: develog
-description: develop blog
+title:                                
+description: WEB FULL STACK DEVELOPER JUNHO KIM
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
