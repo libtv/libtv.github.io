@@ -16,7 +16,7 @@ cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
-production_url: https://libtv.github.io/develog/
+production_url: https://libtv.github.io/
 source_url: https://github.com/jekyller/jasper2/
 CNAME: #add cname for website to be created
 

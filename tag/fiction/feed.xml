@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="/develog/tag/fiction/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/develog/" rel="alternate" type="text/html" />
+  <link href="/tag/fiction/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
   <updated>2020-03-22T03:17:44+09:00</updated>
-  <id>/develog/tag/fiction/feed.xml</id>
+  <id>/tag/fiction/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Organising your content with tags</title>
-      <link href="/develog/using-tags" rel="alternate" type="text/html" title="Organising your content with tags" />
+      <link href="/using-tags" rel="alternate" type="text/html" title="Organising your content with tags" />
       <published>2017-07-27T17:00:00+09:00</published>
       <updated>2017-07-27T17:00:00+09:00</updated>
-      <id>/develog/using-tags</id>
-      <content type="html" xml:base="/develog/using-tags">&lt;p&gt;Ghost has a single, powerful organisational taxonomy, called tags.&lt;/p&gt;
+      <id>/using-tags</id>
+      <content type="html" xml:base="/using-tags">&lt;p&gt;Ghost has a single, powerful organisational taxonomy, called tags.&lt;/p&gt;
 &lt;p&gt;It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like Gmail labels. By tagging posts with one or more keyword, you can organise articles into buckets of related content.&lt;/p&gt;
 &lt;h2 id=&quot;basictagging&quot;&gt;Basic tagging&lt;/h2&gt;
 &lt;p&gt;When you write a post, you can assign tags to help differentiate between categories of content. For example, you might tag some posts with &lt;code&gt;News&lt;/code&gt; and other posts with &lt;code&gt;Cycling&lt;/code&gt;, which would create two distinct categories of content listed on &lt;code&gt;/tag/news/&lt;/code&gt; and &lt;code&gt;/tag/cycling/&lt;/code&gt;, respectively.&lt;/p&gt;
