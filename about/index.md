@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: page
 current: post
 title: About
-navigation: True
+navigation: False
 logo: 'assets/images/ghost.png'
 class: page-template
 subclass: 'post page'
