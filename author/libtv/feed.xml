@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/libtv/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-05-05T15:57:33+09:00</updated>
+  <updated>2021-05-05T16:07:03+09:00</updated>
   <id>http://localhost:4000/author/libtv/feed.xml</id>
 
   
@@ -254,18 +254,18 @@ exclude:
   &lt;p&gt;먼저 &lt;a href=&quot;https://www.egovframe.go.kr/&quot; target=&quot;_blank&quot;&gt;전자정부프레임워크&lt;/a&gt;에 들어가보도록 합시다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring1_20.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/images/spring/spring1_20.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;현재 작성 기준일 &lt;code class=&quot;highlighter-rouge&quot;&gt;2021-05-05&lt;/code&gt; 에서의 UI는 이러한 형식으로 되어 있습니다. 항상 바뀔 수 있다는 점 명시해주세요!!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring1_21.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/images/spring/spring1_21.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;자 그러면 위쪽에 &lt;code class=&quot;highlighter-rouge&quot;&gt;다운로드&lt;/code&gt; 버튼을 눌러주세요.&lt;br /&gt;
 그리고 &lt;code class=&quot;highlighter-rouge&quot;&gt;개발환경&lt;/code&gt; 버튼을 먼저 누르신 다음 &lt;code class=&quot;highlighter-rouge&quot;&gt;3.x 다운로드&lt;/code&gt; 버튼을 눌러주세요&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring1_22.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/images/spring/spring1_22.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;[3.9.0]버전의 개발자용 개발환경 32&amp;amp;64bit 를 눌러줍시다.&lt;br /&gt;
 그리고 개인 컴퓨터에 맞는  &lt;code class=&quot;highlighter-rouge&quot;&gt;Bit&lt;/code&gt; 를 인지해주시고, 알맞은 exe를 다운로드 해주세요.&lt;/p&gt;
@@ -275,7 +275,7 @@ exclude:
   &lt;p&gt;exe를 실행시키면 반디집으로 압축이 해제됩니다. 경로가 길어서 압축해제가 안될 수 있으니 &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\&lt;/code&gt; 드라이브 혹은 최대한 &lt;code class=&quot;highlighter-rouge&quot;&gt;짧은 경로&lt;/code&gt;에 압축해제 하시면 되겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring1_23.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/images/spring/spring1_23.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;자 이제 압축이 해제됬으면 위와 같은 파일들이 나오게 됩니다. &lt;br /&gt;이클립스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;구동&lt;/code&gt;시켜 보도록 하죠!!&lt;/p&gt;
 &lt;/blockquote&gt;
