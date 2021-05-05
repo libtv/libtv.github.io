@@ -15,7 +15,8 @@
    &lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;                    : 어떠한 문장이나 단어를 하이라이트 할 때 사용합니다.
    &lt;a target=&quot;_blank&quot;&gt; &lt;/a&gt;                                    : a 태그를 이용하여 문서를 이동하는데 사용합니다.
    &lt;p&gt;&lt;strong  class=&quot;subtitle_fontAwesome&quot;&gt; &lt;/strong&gt;&lt;/p&gt;     : 주제를 기록할 때 사용합니다.
-   &gt;  ** **                                                    : 특별히 설명하거나 코드를 적어야 하는 경우 사용합니다.
+   &gt;                                                           : 설명할 때 사용합니다.
+   &gt;  ** **                                                    : 코드를 적어야 하는 경우 사용합니다.
    &lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
 markdown: kramdown
 highlighter: rouge
@@ -113,6 +114,7 @@ exclude:
   - .git*
   - backup
 &lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/libtv/b04c361f69890ed6927fbfaddabaf612.js&quot;&gt; &lt;/script&gt;           : gist 코드입니다.
+   ![name](assets/images/spring/spring1_1.png)                 : image를 삽입하는 코드입니다.
  --&gt;
 
 </description>
