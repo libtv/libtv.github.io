@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/spring/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-05-05T18:36:36+09:00</updated>
+  <updated>2021-05-05T19:50:07+09:00</updated>
   <id>http://localhost:4000/tag/spring/feed.xml</id>
 
   
@@ -30,6 +30,394 @@
   
   
 
+  
+    <entry>
+      <title type="html">Spring 개발일지(3) - 스프링 프로젝트 생성</title>
+      <link href="http://localhost:4000/spring-num3" rel="alternate" type="text/html" title="Spring 개발일지(3) - 스프링 프로젝트 생성" />
+      <published>2021-05-05T00:40:00+09:00</published>
+      <updated>2021-05-05T00:40:00+09:00</updated>
+      <id>http://localhost:4000/spring-num3</id>
+      <content type="html" xml:base="http://localhost:4000/spring-num3">&lt;!--
+   &lt; 준호가 이용할 태그 정리&gt;
+   &lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;                    : 어떠한 문장이나 단어를 하이라이트 할 때 사용합니다.
+   &lt;a target=&quot;_blank&quot;&gt; &lt;/a&gt;                                    : a 태그를 이용하여 문서를 이동하는데 사용합니다.
+   &lt;p&gt;&lt;strong  class=&quot;subtitle_fontAwesome&quot;&gt; &lt;/strong&gt;&lt;/p&gt;     : 주제를 기록할 때 사용합니다.
+   &gt;                                                           : 설명할 때 사용합니다.
+   &gt;  ** **                                                    : 코드를 적어야 하는 경우 사용합니다.
+   &lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: &amp;#39;en-uk&amp;#39;
+words_per_minute: 200
+
+# edit baseurl to simply &amp;#39;/&amp;#39; if using as your personal page (instead of a project page)
+baseurl: /
+
+# Website info
+title: 웹 개발자, 김준호의 블로그
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+CNAME: #add cname for website to be created
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if &amp;#39;True&amp;#39; the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter:  # replace by your username
+facebook:  # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors&amp;#39; info in `_data/authors.yml`
+# Tags&amp;#39; info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author&amp;#39;s page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post&amp;#39;s page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for building master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV[&amp;#39;GIT_NAME&amp;#39;] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to &amp;quot;source&amp;quot; for USERNAME.github.io
+# or &amp;quot;master&amp;quot; otherwise
+safe: False
+lsi: False
+username: libtv
+repo: libtv.github.io
+branch: master
+relative_source: 
+destination: ../jasper2-pages/
+production_url:  https://libtv.github.io/
+source_url:  https://github.com/libtv/libtv.github.io/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - &amp;quot;*.Rmd&amp;quot;
+  - .git*
+  - backup
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/libtv/b04c361f69890ed6927fbfaddabaf612.js&quot;&gt; &lt;/script&gt;           : gist 코드입니다.
+   ![name](assets/images/spring/spring1_1.png)                 : image를 삽입하는 코드입니다.
+ --&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 개발일지는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num1&quot;&gt;Spring 개발일지(1) - 기본적인 상식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num2&quot;&gt;Spring 개발일지(2) - 개발환경 구축&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num3&quot;&gt;Spring 개발일지(3) - 스프링 프로젝트 생성&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;설명하기에 앞서&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;안녕하세요. 풀스택 개발자를 위해 달려나가는 &lt;a target=&quot;_blank&quot;&gt;김준호&lt;/a&gt; 입니다.
+&lt;br /&gt;이번 블로그 내용에서는 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Spring&lt;/code&gt; 프로젝트를 생성하는 과정을 설명하도록 하겠습니다. &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Maven&lt;/code&gt;을 이용한 스프링 프로젝트를 생성할 것입니다. 천천히 따라오면서 프로젝트의 뼈대와 기초부터 천천히 파악하는 것이 중요합니다. 그러면 시작해보도록 하죠!&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;스프링 프로젝트 생성&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;스프링 프로젝트를 이클립스로 간단하게 생성하는 방법입니다. 빌드 구성은 Maven을 사용하여 우리가 만든 Class들과 의존하는 넥서스의 저장소 및 그러한 파일들을 편하게 다운받고 빌드 해주는 빌드 구성이라고 보시면 됩니다. 그러면 이클립스를 간단히 열어보도록 하죠.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_1.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;왼쪽 리스트 부분에 오른쪽 마우스 버튼을 누른 후에 &lt;code class=&quot;highlighter-rouge&quot;&gt;New -&amp;gt; Other&lt;/code&gt; 을 누릅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_2.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;기본적으로 전자정부프레임워크는 많은 플로그인을 포함하기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;Maven&lt;/code&gt; 을 검색하고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Next&lt;/code&gt; 을 누릅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_3.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;아키텍처 선택을 피하고 간단히 만들 수 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Create a Simple project&lt;/code&gt; 를 체크하고, &lt;code class=&quot;highlighter-rouge&quot;&gt;Next&lt;/code&gt; 을 누릅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_4.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Group Id&lt;/code&gt; 는 전체적으로 묶는 그룹 명을 나타내는 것이며, &lt;code class=&quot;highlighter-rouge&quot;&gt;Artifact Id&lt;/code&gt; 는 하나의 프로젝트를 명시하는 id를 나타냅니다. 적시해주시고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Next&lt;/code&gt; 을 누릅니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;예를 들자면 네이버는 Login을 관리하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Login Service&lt;/code&gt;, Blog를 관리하는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Blog Service&lt;/code&gt; 등 여러 서비스들이 있을텐데 이러한 네이버라는 회사는 &lt;code class=&quot;highlighter-rouge&quot;&gt;com.naver&lt;/code&gt;라는 &lt;code class=&quot;highlighter-rouge&quot;&gt;group Id&lt;/code&gt;으로 묶고 서비스마다 개별적인 프로젝트를 관리하기 위해서 blog나 login이라는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Artifact Id&lt;/code&gt;를 선언해주는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_5.png&quot; alt=&quot;오라클&quot; /&gt;
+이러한 프로젝트가 생겼습니다. 하지만 Java Project라고 써져 있고, 아직 Spring Project 설정이 끝난 것은 아닙니다.!! &lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;그러면 설정을 하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; 을 살펴보도록 하죠&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_6.png&quot; alt=&quot;오라클&quot; /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; 에서는 의존하는 라이브러리 구성, 빌드 형식, 배포, 넥서스 저장소 등 여러가지 설정들을 할 수 있습니다. 이러한 설정들은 차 후 게시글에서 설명하도록 하겠습니다.&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;그러면 일단 스프링 프로젝트로 적용하기 위한 모듈들을 불러오도록 하겠습니다. 아래 코드를 붙여넣도록 합시다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; 
+		 xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; 
+		 xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+	&amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+	&amp;lt;groupId&amp;gt;spring4&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;test&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
+ 
+   	&amp;lt;dependencies&amp;gt;
+		&amp;lt;dependency&amp;gt;
+			&amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+			&amp;lt;artifactId&amp;gt;spring-context&amp;lt;/artifactId&amp;gt;
+			&amp;lt;version&amp;gt;4.0.0.RELEASE&amp;lt;/version&amp;gt;
+		&amp;lt;/dependency&amp;gt;
+
+	&amp;lt;/dependencies&amp;gt;
+
+	&amp;lt;build&amp;gt;
+		&amp;lt;plugins&amp;gt;
+			&amp;lt;plugin&amp;gt;
+				&amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+				&amp;lt;version&amp;gt;3.1&amp;lt;/version&amp;gt;
+				&amp;lt;configuration&amp;gt;
+					&amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+					&amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+					&amp;lt;encoding&amp;gt;utf-8&amp;lt;/encoding&amp;gt;
+				&amp;lt;/configuration&amp;gt;
+			&amp;lt;/plugin&amp;gt;
+		&amp;lt;/plugins&amp;gt;
+	&amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/libtv/f53087b896e0991964e399a588ee9778.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dependencies&lt;/code&gt; : 의존 라이브러리를 가져올 목록들을 의미합니다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;dependency&lt;/code&gt; : 하나의 의존되는 라이브러리를 가져오는 것을 뜻하며 현재는 스프링 라이브러리를 가져온다는 뜻 입니다.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; : 빌드 시에 어떠한 모듈을 통해 빌드가 될 것인지를 지정해주는 공간입니다. 현재는 Maven을 이용한 빌드를 의미합니다.&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;pom.xml을 저장하게 되면 아래와 같은 오류가 뜨게 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_7.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;해당 오류는 &lt;code class=&quot;highlighter-rouge&quot;&gt;JDK UPDATE&lt;/code&gt; 의 오류이기 때문에 프로젝트를 &lt;code class=&quot;highlighter-rouge&quot;&gt;UPDATE&lt;/code&gt;하면 오류가 제거됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_8.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;해당 프로젝트를 오른쪽 마우스 누르시고, &lt;code class=&quot;highlighter-rouge&quot;&gt;maven -&amp;gt;Update Project&lt;/code&gt; 클릭합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_9.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;오류가 제거되었고, Java Project에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Spring Project&lt;/code&gt; 로 변경된 것을 확인할 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;프로젝트 구조 설명&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/spring/spring3_10.png&quot; alt=&quot;오라클&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;JAVA&lt;/strong&gt; : 프로젝트의 BackEnd 구성을 맡고 있는 URI입니다. 주로 java 파일을 코딩하여 사용자에게 안보이는 곳에서 처리를 하기 때문에 BackEnd라고 불립니다.&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Resource&lt;/strong&gt; : 개발자들은 스프링의 XML 파일 및 Property 부분을 주로 저장하는 URI입니다. 또한 CSS나 JS를 추가 하기도 합니다.&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;pom.xml&lt;/strong&gt; : 이 파일로 필요한 라이브러리를 다운 받게 됩니다. /root/.m2/repository 혹은 사용자/.m2/repository에 저장되어 라이브러리를 관리합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;간단하게 이렇게 구성을 파악하고 있으면 다른 스프링 프로젝트의 구성도 달라지지 않기 때문에 빠르게 소스를 파악할 수 있습니다. 언제나 기초가 중요하듯이 이러한 구성요소를 알고 넘어갑시다!
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;마무리&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 이클립스로 간단하게 프로젝트를 생성하여 자신만의 spring 프로젝트를 생성하는 법을 배웠습니다.&lt;br /&gt;
+하지만 왜 스프링을 사용하는 것인지 아직까지 의문 투성인 부분이 많습니다.&lt;br /&gt;
+다음에는 스프링을 왜 사용하는 것인지, 그 의문점을 파악하기 위해 직접 스프링 프로젝트를 체험해보는 시간을 갖도록 하겠습니다.&lt;/p&gt;
+
+&lt;!-- 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub Page&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rouge&lt;/code&gt;
+--&gt;
+&lt;!--
+&lt;p&gt;자 이제 &lt;code class=&quot;highlighter-rouge&quot;&gt;C:/blogmaker/assets/css/syntax.css&lt;/code&gt; 파일이 생성되었습니다.&lt;/p&gt;
+
+이 글은 python basic 입니다.!!
+~~~javascript
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+~~~
+
+&lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: &amp;#39;en-uk&amp;#39;
+words_per_minute: 200
+
+# edit baseurl to simply &amp;#39;/&amp;#39; if using as your personal page (instead of a project page)
+baseurl: /
+
+# Website info
+title: 웹 개발자, 김준호의 블로그
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+CNAME: #add cname for website to be created
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if &amp;#39;True&amp;#39; the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter:  # replace by your username
+facebook:  # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors&amp;#39; info in `_data/authors.yml`
+# Tags&amp;#39; info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author&amp;#39;s page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post&amp;#39;s page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for building master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV[&amp;#39;GIT_NAME&amp;#39;] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to &amp;quot;source&amp;quot; for USERNAME.github.io
+# or &amp;quot;master&amp;quot; otherwise
+safe: False
+lsi: False
+username: libtv
+repo: libtv.github.io
+branch: master
+relative_source: 
+destination: ../jasper2-pages/
+production_url:  https://libtv.github.io/
+source_url:  https://github.com/libtv/libtv.github.io/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - &amp;quot;*.Rmd&amp;quot;
+  - .git*
+  - backup
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/libtv/b04c361f69890ed6927fbfaddabaf612.js&quot;&gt; &lt;/script&gt; 
+--&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김준호</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Spring 개발일지(2) - 개발환경 구축</title>
@@ -148,6 +536,7 @@ exclude:
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num1&quot;&gt;Spring 개발일지(1) - 기본적인 상식&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num2&quot;&gt;Spring 개발일지(2) - 개발환경 구축&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num3&quot;&gt;Spring 개발일지(3) - 스프링 프로젝트 생성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 
@@ -446,6 +835,7 @@ exclude:
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num1&quot;&gt;Spring 개발일지(1) - 기본적인 상식&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num2&quot;&gt;Spring 개발일지(2) - 개발환경 구축&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num3&quot;&gt;Spring 개발일지(3) - 스프링 프로젝트 생성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -621,7 +1011,7 @@ exclude:
       
 
       
-        <summary type="html">Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 스프링 프레임워크 스프링 프레임워크 (“영어”): Spring Framework)는 자바 플랫폼을 위한 오픈 소스 애플리케이션 프레임워크로서 간단히 스프링(Spring)이라고도 한다. 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공하고 있다. 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준프레임워크의 기반 기술로서 쓰이고 있다.</summary>
+        <summary type="html">Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 스프링 프레임워크 스프링 프레임워크 (“영어”): Spring Framework)는 자바 플랫폼을 위한 오픈 소스 애플리케이션 프레임워크로서 간단히 스프링(Spring)이라고도 한다. 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공하고 있다. 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준프레임워크의 기반 기술로서 쓰이고 있다.</summary>
       
 
       
