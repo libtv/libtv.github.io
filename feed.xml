@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-05T16:10:32+09:00</updated><id>http://localhost:4000/</id><title type="html">준호의 개발일지</title><subtitle>Spring, Node, Javascript, Vue, etc... I love development</subtitle><entry><title type="html">Spring 개발일지(2) - 개발환경 구축</title><link href="http://localhost:4000/spring-num2" rel="alternate" type="text/html" title="Spring 개발일지(2) - 개발환경 구축" /><published>2021-05-04T20:40:00+09:00</published><updated>2021-05-04T20:40:00+09:00</updated><id>http://localhost:4000/spring-num2</id><content type="html" xml:base="http://localhost:4000/spring-num2">&lt;!--
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-05T16:07:03+09:00</updated><id>http://localhost:4000/</id><title type="html">준호의 개발일지</title><subtitle>Spring, Node, Javascript, Vue, etc... I love development</subtitle><entry><title type="html">Spring 개발일지(2) - 개발환경 구축</title><link href="http://localhost:4000/spring-num2" rel="alternate" type="text/html" title="Spring 개발일지(2) - 개발환경 구축" /><published>2021-05-04T20:40:00+09:00</published><updated>2021-05-04T20:40:00+09:00</updated><id>http://localhost:4000/spring-num2</id><content type="html" xml:base="http://localhost:4000/spring-num2">&lt;!--
->>>>>>> 2dff8a925c69f037bcfb07dc4f82ec9e8b521ddd
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-05T18:36:36+09:00</updated><id>http://localhost:4000/</id><title type="html">준호의 개발일지</title><subtitle>Spring, Node, Javascript, Vue, etc... I love development</subtitle><entry><title type="html">Spring 개발일지(2) - 개발환경 구축</title><link href="http://localhost:4000/spring-num2" rel="alternate" type="text/html" title="Spring 개발일지(2) - 개발환경 구축" /><published>2021-05-04T20:40:00+09:00</published><updated>2021-05-04T20:40:00+09:00</updated><id>http://localhost:4000/spring-num2</id><content type="html" xml:base="http://localhost:4000/spring-num2">&lt;!--
    &lt; 준호가 이용할 태그 정리&gt;
    &lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;                    : 어떠한 문장이나 단어를 하이라이트 할 때 사용합니다.
    &lt;a target=&quot;_blank&quot;&gt; &lt;/a&gt;                                    : a 태그를 이용하여 문서를 이동하는데 사용합니다.
@@ -257,11 +253,7 @@ exclude:
 
 &lt;p&gt;원래 처음상태의 이클립스는 Basic Theme를 가지고 있지만 저는 다른 Theme를 사용하고 있었기에 모습이 다를 수 밖에 없을겁니다. 정상적으로 이클립스가 구동이 되었으면 현재 개발환경 준비는 완료된 상태입니다.&lt;br /&gt;
 다음 게시글에서는 스프링 프로젝트를 생성하는 방법에 대해 알아보겠습니다.&lt;br /&gt;&lt;br /&gt;
-<<<<<<< HEAD
 다들 수고하셨습니다!!!!!!!!!!!!!!!!!!!!&lt;/p&gt;
-=======
-다들 수고하셨습니다.&lt;/p&gt;
->>>>>>> 2dff8a925c69f037bcfb07dc4f82ec9e8b521ddd
 
 &lt;!-- 
 &lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub Page&lt;/code&gt;
