@@ -11,7 +11,7 @@
 
 
 
-    <title>Spring 개발일지(4) - 자바로 스프링 개발</title>
+    <title>Spring 개발일지(5) - 의존성 주입(DI)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="A16CnDzMoDez81__HFmGZJ1xtHcwiZ2qqTAwYc6li5w" />
@@ -50,24 +50,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Spring, Node, Javascript, Vue, etc... I love development" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/spring-num4" />
+    <link rel="canonical" href="http://localhost:4000/spring-num5" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="준호의 개발일지" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Spring 개발일지(4) - 자바로 스프링 개발" />
-    <meta property="og:description" content="Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 JAVA를 이용하여 직접 Spring을 적용하여" />
-    <meta property="og:url" content="http://localhost:4000/spring-num4" />
+    <meta property="og:title" content="Spring 개발일지(5) - 의존성 주입(DI)" />
+    <meta property="og:description" content="Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 Spring DI(Dependecy Injection)을 알아볼 예정입니다." />
+    <meta property="og:url" content="http://localhost:4000/spring-num5" />
     <meta property="og:image" content="http://localhost:4000/assets/images/spring.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2021-05-06T00:40:00+09:00" />
-    <meta property="article:modified_time" content="2021-05-06T00:40:00+09:00" />
+    <meta property="article:published_time" content="2021-05-07T00:40:00+09:00" />
+    <meta property="article:modified_time" content="2021-05-07T00:40:00+09:00" />
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spring 개발일지(4) - 자바로 스프링 개발" />
-    <meta name="twitter:description" content="Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 JAVA를 이용하여 직접 Spring을 적용하여" />
+    <meta name="twitter:title" content="Spring 개발일지(5) - 의존성 주입(DI)" />
+    <meta name="twitter:description" content="Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 Spring DI(Dependecy Injection)을 알아볼 예정입니다." />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/spring.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -88,7 +88,7 @@
         "name": "준호의 개발일지",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/spring-num4",
+    "url": "http://localhost:4000/spring-num5",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/images/spring.png",
@@ -97,9 +97,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/spring-num4"
+        "@id": "http://localhost:4000/spring-num5"
     },
-    "description": "Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 JAVA를 이용하여 직접 Spring을 적용하여"
+    "description": "Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) 설명하기에 앞서 안녕하세요. 풀스택 개발자를 위해 달려나가는 김준호 입니다. 이번 블로그 내용에서는 Spring DI(Dependecy Injection)을 알아볼 예정입니다."
 }
     </script>
 
@@ -112,7 +112,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Spring 개발일지(4) - 자바로 스프링 개발" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Spring 개발일지(5) - 의존성 주입(DI)" href="/feed.xml" />
 
 
 </head>
@@ -183,7 +183,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 6 May 2021"> 6 May 2021</time>
+                    <time class="post-full-meta-date" datetime=" 7 May 2021"> 7 May 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -193,7 +193,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Spring 개발일지(4) - 자바로 스프링 개발</h1>
+                <h1 class="post-full-title">Spring 개발일지(5) - 의존성 주입(DI)</h1>
             </header>
 
             <!-- // 이미지 나오게하는거 처리
@@ -324,152 +324,292 @@ exclude:
 <p><strong class="subtitle_fontAwesome">설명하기에 앞서</strong></p>
 <p>안녕하세요. 풀스택 개발자를 위해 달려나가는 <a target="_blank">김준호</a> 입니다.
 <br />이번 블로그 내용에서는 
-<code class="highlighter-rouge">JAVA</code>를 이용하여 직접 <code class="highlighter-rouge">Spring</code>을 적용하여 개발하는 시간을 갖도록 하겠습니다.<br />
-코드를 먼저 적용하면서 설명을 덧붙이도록 하죠. <br />그러면 시작해보겠습니다.</p>
+<code class="highlighter-rouge">Spring DI(Dependecy Injection)</code>을 알아볼 예정입니다.<br />
+천천히 시간을 가지면서 이해해보도록 합시다. 그러면 시작해보도록 하죠!</p>
 <hr />
 
-<p><strong class="subtitle_fontAwesome">자바로 스프링 시작하기</strong></p>
+<p><strong class="subtitle_fontAwesome">DI(Dependecy Injection)란</strong></p>
 
-<p>자. 저번시간에 만들었던 저번에 만들었던 <code class="highlighter-rouge">Project</code>를 이용하면 되겠습니다. 프로젝트 참고 자료는 <a href="./spring-num3" target="_blank">여기</a>를 참고해주시기 바랍니다.<br />
-그러면 프로젝트에 <code class="highlighter-rouge">Class</code>를 만들어보도록 하죠.</p>
-
-<p><img src="assets/images/spring/spring4_1.png" alt="스프링설명" /></p>
 <blockquote>
-  <p>기존에 있는 프로젝트에서 <code class="highlighter-rouge">Class</code> 를 생성하겠습니다.</p>
+  <p>의존 하는 객체를 Spring Container 혹은 외부에 넘겨주는 것이며 우리 말로는 의존성 주입이라고 의미합니다. 이렇게 생성된 객체들은 Container를 통해 한번에 불러올 수 있다는 장점이 있습니다.<br /></p>
 </blockquote>
 
-<p><img src="assets/images/spring/spring4_2.png" alt="스프링설명" /></p>
+<p>간단히 살펴본 것으로써 이해하기는 힘든 의미인 것은 사실입니다. 왜 객체를 외부에 넘겨주는 작업을 하며, 새로운 개념을 배워야 하는 것일까요? 그래도 한번 새로운 예제를 보면서 개념을 이해하다보면 
+이러한 부분 떄문에 DI를 사용하는구나… 라고 공감하실 수 있습니다. 그러면 살펴보시죠!</p>
+<hr />
+
+<p><strong class="subtitle_fontAwesome">DI를 위한 기초 작업[패키지 분리]</strong></p>
+
+<p>기존에 우리가 쓰던 프로젝트를 이용하여 실습해보도록 하죠!! 없으신 분들은 아래 내용을 참고하셔도 좋고, 직접 하고 싶으시다면 <a href="./spring-num3" target="_blank">여기</a>를 참고해주시기 바랍니다.<br />
+<br />
+자.. 저번 시간에는 가상으로 회원가입을 만들었으며, 이러한 회원가입은 상상의 나래를 펼쳐서 만들어보았습니다. <strong>DataBase</strong>에 넣지도 않았으며, 값의 입력도 없었었죠??<br />
+지금도 Database는 사용하지 않을 것이지만, 그래도 일정한 틀이 있어야 하기 떄문에 <code class="highlighter-rouge">VO</code>도 만들어 보고, 값을 <code class="highlighter-rouge">Store</code>도 해보겠습니다.<br /> VO에 대해 알아보고 싶은 분은 <a href="https://woowacourse.github.io/javable/post/2020-06-11-value-object/" target="_blank">여기</a>를 클릭해주세요</p>
+
 <blockquote>
-  <p>일단 <code class="highlighter-rouge">Main Class</code> 를 먼저 생성해주시고, Main Method를 자동으로 생성해주는 것을 체크해주도록 합시다.</p>
+  <p>그전에 기능들을 <code class="highlighter-rouge">Divide</code>하기 위해 패키지를 나누어서 설정해보도록 하겠습니다. 이것은 차 후의 프로젝트에 적응을 하기 위한 <code class="highlighter-rouge">necessary point</code>입니다!!<br /></p>
 </blockquote>
 
-<p><img src="assets/images/spring/spring4_3.png" alt="스프링설명" /></p>
+<p><img src="assets/images/spring/spring5_1.png" alt="DI의존주입" /></p>
 <blockquote>
-  <p>그리고 스프링을 간단하게 설명해드리기 위해서 클래스를 하나 더 생성하는데, <code class="highlighter-rouge">Register Class</code> 를 생성하겠습니다.<br /></p>
+  <p>패키지를 생성하기 위해 <code class="highlighter-rouge">src/main/java</code>에 오른쪽 마우스 누르시고 <code class="highlighter-rouge">New -&gt; Package</code> 을 누릅니다.</p>
 </blockquote>
 
-<p>이 Register Class를 통해 가정을 해보도록 합시다. 홈페이지가 있는데, 메인클래스에서 회원가입 버튼을 누르면 회원가입을 하도록 만들어봅시다. 아주 간단하게, 즉 상상의 나래를 펼치도록 해야합니다….ㅎㅎ</p>
+<p><img src="assets/images/spring/spring5_2.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p>패키지 명은 <code class="highlighter-rouge">Service</code>를 입력하고 선택합니다.<br />
+참고로 Service 패키지는 <code class="highlighter-rouge">DataBase</code>와 연동하여 처리를 할 때 자주 사용하는 패키지의 의미를 뜻합니다.</p>
+</blockquote>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Register.java</span>
-<span class="kn">package</span> <span class="n">test</span><span class="o">;</span>
+<p><img src="assets/images/spring/spring5_3.png" alt="DI의존주입" />
+<img src="assets/images/spring/spring5_4.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p>그리고 우리가 만들었던 Register.java 파일을 Service 패키지로 <code class="highlighter-rouge">Move</code> 합시다.</p>
+</blockquote>
 
-<span class="cm">/* 회원가입 클래스, doRegister() 메소드를 호출하면 회원가입이 완료가 되는 간단한 클래스 */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Register</span> <span class="o">{</span>
-	<span class="kd">public</span> <span class="nf">Register</span><span class="o">()</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" 회원가입 클래스를 생성합니다. "</span><span class="o">);</span> 
+<p><img src="assets/images/spring/spring5_5.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p>F2를 눌러서 이름 변경을 해봅시다. 이름은 <code class="highlighter-rouge">Register.java -&gt; RegisterService.java</code>로 바꾸도록 하죠.</p>
+</blockquote>
+
+<p><img src="assets/images/spring/spring5_6.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p>자.. 일단 기존에 있는 코드들의 기초적인 공사는 끝난 거 같습니다. 그러면 <code class="highlighter-rouge">VO</code>를 만들고 <code class="highlighter-rouge">Service</code>를 수정하여 좀 더 깊게 들어가보도록 하죠.</p>
+</blockquote>
+<hr />
+
+<p><strong class="subtitle_fontAwesome">예제로 확인하는 Spring DI</strong></p>
+
+<p><img src="assets/images/spring/spring5_7.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p><code class="highlighter-rouge">VO</code>를 만들기 위하여 <code class="highlighter-rouge">New-&gt; Class</code>를 클릭합니다.</p>
+</blockquote>
+
+<p><img src="assets/images/spring/spring5_8.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p><code class="highlighter-rouge">RegisterVO.java</code> 파일을 만들어 줍시다.</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* RegisterVO.java */</span>
+<span class="kn">package</span> <span class="n">vo</span><span class="o">;</span>
+
+<span class="cm">/* 회원가입을 위한 VO 클래스 */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RegisterVO</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">userId</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">userPw</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">userEmail</span><span class="o">;</span>
+	
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getUserId</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">userId</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserId</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">userId</span> <span class="o">=</span> <span class="n">userId</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getUserPw</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">userPw</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserPw</span><span class="o">(</span><span class="n">String</span> <span class="n">userPw</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">userPw</span> <span class="o">=</span> <span class="n">userPw</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getUserEmail</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">userEmail</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserEmail</span><span class="o">(</span><span class="n">String</span> <span class="n">userEmail</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">userEmail</span> <span class="o">=</span> <span class="n">userEmail</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="n">RegisterVO</span><span class="o">(</span><span class="n">Builder</span> <span class="n">builder</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">userId</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">userId</span><span class="o">;</span>
+		<span class="n">userPw</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">userPw</span><span class="o">;</span>
+		<span class="n">userEmail</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">userEmail</span><span class="o">;</span>
 	<span class="o">}</span>
 	
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">doRegister</span><span class="o">()</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" 회원가입을 실시합니다. "</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Builder</span> <span class="o">{</span>
+		<span class="kd">private</span> <span class="n">String</span> <span class="n">userId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+		<span class="kd">private</span> <span class="n">String</span> <span class="n">userPw</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+		<span class="kd">private</span> <span class="n">String</span> <span class="n">userEmail</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+		
+		<span class="kd">public</span> <span class="nf">Builder</span><span class="o">()</span> <span class="o">{</span>
+			<span class="c1">// TODO Auto-generated constructor stub</span>
+		<span class="o">}</span>
+
+		<span class="kd">public</span> <span class="n">Builder</span> <span class="nf">setUserId</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">userId</span> <span class="o">=</span> <span class="n">userId</span><span class="o">;</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="kd">public</span> <span class="n">Builder</span> <span class="nf">setUserPw</span><span class="o">(</span><span class="n">String</span> <span class="n">userPw</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">userPw</span> <span class="o">=</span> <span class="n">userPw</span><span class="o">;</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="kd">public</span> <span class="n">Builder</span> <span class="nf">setUserEmail</span><span class="o">(</span><span class="n">String</span> <span class="n">userEmail</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">userEmail</span> <span class="o">=</span> <span class="n">userEmail</span><span class="o">;</span>
+			<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="kd">public</span> <span class="n">RegisterVO</span> <span class="nf">build</span><span class="o">()</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="k">new</span> <span class="nf">RegisterVO</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+		<span class="o">}</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <blockquote>
-  <p><code class="highlighter-rouge">Register.java</code> 에 내용은 이런식으로 적용하여 봅시다. 
-<br />그리고 <code class="highlighter-rouge">doRegister()</code> 메소드를 호출하여 실제로 회원가입이 된다고 가정하여 봅시다.</p>
+  <p>간단하게 회원가입에 필요한 정보들을 적었습니다.</p>
 </blockquote>
 
-<p>자 그러면 <code class="highlighter-rouge">Main Class</code>에서는 이러한 메소드를 호출하기 위해서 <code class="highlighter-rouge">객체</code>를 생성하고, <code class="highlighter-rouge">메소드</code>를 호출해야 하겠죠?? 이것이 기본적인 JAVA의 <code class="highlighter-rouge">객체지향프로그래밍</code> 특징입니다. <br />코드는 아래와 같습니다.</p>
+<p><img src="assets/images/spring/spring5_9.png" alt="DI의존주입" /></p>
+<blockquote>
+  <p>그리고, <code class="highlighter-rouge">DAO Package</code>도 만들고, <code class="highlighter-rouge">RegisterDAO.java</code>로 적어주신다음에 Next 눌러주세요</p>
+</blockquote>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 회원가입의 메인 클래스</span>
-<span class="kn">package</span> <span class="n">test</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* RegisterDAO.java */</span>
+<span class="kn">package</span> <span class="n">dao</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">vo.RegisterVO</span><span class="o">;</span>
 
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">Register</span> <span class="n">register</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Register</span><span class="o">();</span> <span class="c1">// Register 객체를 생성하고.</span>
-		<span class="n">register</span><span class="o">.</span><span class="na">doRegister</span><span class="o">();</span>				<span class="c1">// 호출한다.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RegisterDAO</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;</span> <span class="n">regList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;();</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">SEQUENCE</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+	
+	<span class="n">RegisterDAO</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Register.DAO Class 객체를 생성하였습니다."</span><span class="o">);</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="n">Integer</span> <span class="nf">join</span><span class="o">(</span><span class="n">RegisterVO</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">regList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">SEQUENCE</span><span class="o">++,</span> <span class="n">input</span><span class="o">);</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <blockquote>
-  <p><code class="highlighter-rouge">Main Class</code>에서 이런식으로 불러왔습니다. 이게 기본적인 <code class="highlighter-rouge">JAVA</code> 방식입니다. <br /></p>
+  <p><code class="highlighter-rouge">RegisterDAO.java</code>를 다음과 같이 작성해주세요. <code class="highlighter-rouge">join</code> 메소드를 호출 하면 리스트에 추가하는 아주 간단한 소스코드 입니다.<br /></p>
 </blockquote>
 
-<p>하지만 이러한 방식을 사용하게 되면 필요한 객체들을 계속 생성할 수 있고, 관리도 적절하지 않을 수 있습니다. JAVA Design Pattern 중 <code class="highlighter-rouge">Singleton Pattern</code> 을 사용하면 객체를 사용할 수 있지만 이러한 부분을 관리하는 것 또한 개발자의 업무부담이 늘고, 의존성이 높아질수 있는 점을 가정하면 <code class="highlighter-rouge">Spring</code> 의 사용은 혁신적인 방법입니다.<br />
-스프링을 통해 어떠한 형태로 변할 수 있는지 확인해보도록 합시다.<br /></p>
+<p>그리고 Service를 구현해 봅시다. RegisterService 에서는 실제로 값이 들어갈 수 있는지 체크만 하고, DAO를 불러오는 역할을 하는 클래스입니다. 아래 코드를 확인해볼까요??</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* RegisterService.java */</span>
+<span class="kn">package</span> <span class="n">service</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Set</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">dao.RegisterDAO</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map.Entry</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">vo.RegisterVO</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RegisterService</span> <span class="o">{</span>
+	<span class="n">RegisterDAO</span> <span class="n">registerDAO</span><span class="o">;</span>
+	
+	
+	<span class="n">RegisterService</span><span class="o">(</span><span class="n">RegisterDAO</span> <span class="n">registerDAO</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">registerDAO</span> <span class="o">=</span> <span class="n">registerDAO</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">join</span><span class="o">(</span><span class="n">RegisterVO</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span>
+		<span class="cm">/* regList에 값이 있는 지 확인 */</span>
+		<span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;&gt;</span> <span class="n">regEntry</span> <span class="o">=</span>  <span class="n">registerDAO</span><span class="o">.</span><span class="na">regList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">();</span>
+		<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;&gt;</span> <span class="n">regIterator</span> <span class="o">=</span>  <span class="n">regEntry</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+		<span class="k">while</span><span class="o">(</span><span class="n">regIterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+			<span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;</span> <span class="n">next</span> <span class="o">=</span> <span class="n">regIterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+			<span class="n">Integer</span> <span class="n">key</span> <span class="o">=</span> <span class="n">next</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+			<span class="n">RegisterVO</span> <span class="n">value</span> <span class="o">=</span> <span class="n">next</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+
+			<span class="cm">/* regList에 값이 있으면 return -1 */</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">getUserId</span><span class="o">()</span> <span class="o">==</span> <span class="n">value</span><span class="o">.</span><span class="na">getUserId</span><span class="o">())</span> <span class="o">{</span>
+				<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이미 존재하는 아이디 입니다."</span><span class="o">);</span>
+				<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="cm">/* 값이 없으면 값이 넣어주고 return 1 */</span>
+		<span class="n">registerDAO</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;&gt;</span> <span class="n">regEntry</span> <span class="o">=</span>  <span class="n">registerDAO</span><span class="o">.</span><span class="na">regList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">();</span>
+		<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;&gt;</span> <span class="n">regIterator</span> <span class="o">=</span>  <span class="n">regEntry</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+		<span class="k">while</span><span class="o">(</span><span class="n">regIterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+			<span class="n">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">RegisterVO</span><span class="o">&gt;</span> <span class="n">next</span> <span class="o">=</span> <span class="n">regIterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+			<span class="n">Integer</span> <span class="n">key</span> <span class="o">=</span> <span class="n">next</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+			<span class="n">RegisterVO</span> <span class="n">value</span> <span class="o">=</span> <span class="n">next</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Key : %s, Value : %s %s %s"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">value</span><span class="o">.</span><span class="na">getUserId</span><span class="o">(),</span> <span class="n">value</span><span class="o">.</span><span class="na">getUserPw</span><span class="o">(),</span> <span class="n">value</span><span class="o">.</span><span class="na">getUserEmail</span><span class="o">()));</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <blockquote>
-  <p>먼저 스프링 컨텍스트 안을 구성하는 <code class="highlighter-rouge">Bean</code> 객체를 생성해야합니다. 그래서 이러한 Bean 객체를 생성하기 위해서는 <code class="highlighter-rouge">XML</code> 을 작성해야하는데 한번 따라해보시면서 이해해보도록 하죠.</p>
+  <p>코드 설명을 하자면 간단히 아이디가 있는지 확인하고, DAO를 호출하는 형태입니다. 현재 코드에서 주의 깊게 볼 부분은 <code class="highlighter-rouge">RegisterService</code> 생성자 부분인데요. 파라미터 부분에 <code class="highlighter-rouge">registerDAO</code> 객체를 가져오게 되는데요.<br /></p>
 </blockquote>
 
-<p><img src="assets/images/spring/spring4_4.png" alt="오라클" /></p>
 <blockquote>
-  <p>먼저 <code class="highlighter-rouge">src/main/Resource</code>에서 오른쪽 마우스를 누르신 후에 <code class="highlighter-rouge">New -&gt; Others</code> 를 눌러봅시다.</p>
-</blockquote>
-
-<p><img src="assets/images/spring/spring4_5.png" alt="오라클" /></p>
-<blockquote>
-  <p><code class="highlighter-rouge">xml File</code>을 눌러주세요. <br />전자정부프레임워크는 플로그인이 많기 때문에 위에 검색하는 부분을 이용하면 더욱 편하답니다~~</p>
-</blockquote>
-
-<p><img src="assets/images/spring/spring4_6.png" alt="오라클" /></p>
-<blockquote>
-  <p>경로는 <code class="highlighter-rouge">src/main/Resource</code>를 클릭해주시고, 파일명은 처음 배우는 것이니까 <code class="highlighter-rouge">ApplicationContext</code>로 따라해보도록 합시다.</p>
-</blockquote>
-
-<blockquote>
-  <p>그리고 만들어진 <code class="highlighter-rouge">ApplicationContext.xml</code>의 내용은 다음과 같이 작성해주세요!! <strong>복붙합시다</strong>
-<br /></p>
+  <p><code class="highlighter-rouge">RegisterDAO.java</code>를 가져오는 부분이 제일 중요합니다. 이 객체는 <code class="highlighter-rouge">Bean</code>에서 꺼내오기 때문에 해당 Bean을 정의해주는 Xml 파일을 확인해봅시다.</p>
 </blockquote>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-
 <span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
 	<span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-	<span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans 
- 		http://www.springframework.org/schema/beans/spring-beans.xsd"</span><span class="nt">&gt;</span>
+	<span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span><span class="nt">&gt;</span>
  		
- 		<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"register"</span> <span class="na">class=</span><span class="s">"test.Register"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+ 	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+ 	
+ 	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerService"</span> <span class="na">class=</span><span class="s">"service.RegisterService"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;constructor-arg</span> <span class="na">ref=</span><span class="s">"registerDAO"</span><span class="nt">&gt;&lt;/constructor-arg&gt;</span>	
+	<span class="nt">&lt;/bean&gt;</span>
  		
  <span class="nt">&lt;/beans&gt;</span>
 </code></pre></div></div>
 
 <blockquote>
-  <p><code class="highlighter-rouge">bean</code> 이라는 객체를 이용하게 되면 <code class="highlighter-rouge">Spring Container</code> 에서 이러한 bean 객체를 꺼내서 사용할 수 있습니다. 즉 객체를 사용하려면 <code class="highlighter-rouge">new</code>를 이용하여 객체를 만들었지만 <code class="highlighter-rouge">Spring</code>에서는 <code class="highlighter-rouge">Container</code>가 생성해주기 때문에 이러한 객체들을 꺼내서 사용하면 된다는 의미입니다.</p>
+  <p>맨 처음에 <code class="highlighter-rouge">registerDAO</code> 객체를 먼저 생성합니다. 생성된 객체를 <code class="highlighter-rouge">registerService Bean</code>을 생성 할 때 <code class="highlighter-rouge">constructor-arg</code> 코드를 이용해  <code class="highlighter-rouge">registerDAO</code> 객체를 주입합니다.<br /></p>
 </blockquote>
 
-<p><br />좀 더 살펴보도록 하죠. beans는 bean의 묶는 의미없는 존재입니다. bean의 id를 설정하여 Class가 같은 Bean 객체가 여러 개일 경우 id로 식별할 수 있습니다.<br />
-class 경로를 통해 이 class의 객체를 자동으로 생성한다는 의미입니다.
-<br />Main 함수의 코드가 조금 달라질 것입니다. 왜냐하면 <strong>new를 사용하지 않고 Spring Container를 이용하여 꺼내기 때문이죠.</strong> 한번 밑에 코드를 봐보도록 하죠!!</p>
+<blockquote>
+  <p><strong>현재 보고 계신 부분이 DI 부분입니다!!</strong></p>
+</blockquote>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 회원가입의 메인 클래스</span>
+<p>코드를 계속 보시고 이해하실 때 까지 살펴봐주시기 바랍니다. 기초이자 제일 중요한 부분입니다.!!</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">test</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.context.support.GenericXmlApplicationContext</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">service.RegisterService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">vo.RegisterVO</span><span class="o">;</span>
+
+<span class="c1">// 회원가입의 메인 클래스</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
 
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="cm">/* 주석 처리를 합니다.
-		Register register = new Register(); // Register 객체를 생성하고.
-		register.doRegister();				// 호출한다.
-		*/</span>
+		<span class="cm">/* xmlContext 불러오기 */</span>
 		<span class="n">GenericXmlApplicationContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GenericXmlApplicationContext</span><span class="o">(</span><span class="s">"classpath:ApplicationContext.xml"</span><span class="o">);</span>
 		
-		<span class="n">Register</span> <span class="n">register</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"register"</span><span class="o">,</span> <span class="n">Register</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-		<span class="n">register</span><span class="o">.</span><span class="na">doRegister</span><span class="o">();</span>
+		<span class="cm">/* register 빈 객체 가져오기 */</span>
+		<span class="n">RegisterService</span> <span class="n">register</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"registerService"</span><span class="o">,</span> <span class="n">RegisterService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+		
+		<span class="cm">/* 회원가입 및 출력 */</span>
+		<span class="n">register</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="k">new</span> <span class="n">RegisterVO</span><span class="o">.</span><span class="na">Builder</span><span class="o">().</span><span class="na">setUserId</span><span class="o">(</span><span class="s">"test"</span><span class="o">).</span><span class="na">setUserPw</span><span class="o">(</span><span class="s">"test"</span><span class="o">).</span><span class="na">setUserEmail</span><span class="o">(</span><span class="s">"test@gmail.com"</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
+		<span class="n">register</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="k">new</span> <span class="n">RegisterVO</span><span class="o">.</span><span class="na">Builder</span><span class="o">().</span><span class="na">setUserId</span><span class="o">(</span><span class="s">"test1"</span><span class="o">).</span><span class="na">setUserPw</span><span class="o">(</span><span class="s">"test1"</span><span class="o">).</span><span class="na">setUserEmail</span><span class="o">(</span><span class="s">"test1@gmail.com"</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
+		<span class="n">register</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="k">new</span> <span class="n">RegisterVO</span><span class="o">.</span><span class="na">Builder</span><span class="o">().</span><span class="na">setUserId</span><span class="o">(</span><span class="s">"test2"</span><span class="o">).</span><span class="na">setUserPw</span><span class="o">(</span><span class="s">"test2"</span><span class="o">).</span><span class="na">setUserEmail</span><span class="o">(</span><span class="s">"test2@gmail.com"</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
+		
+		<span class="n">register</span><span class="o">.</span><span class="na">print</span><span class="o">();</span>
+		
+		<span class="cm">/* 종료 */</span>
 		<span class="n">ctx</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <blockquote>
-  <p>이렇게 <code class="highlighter-rouge">GenericXmlApplicationContext</code>를 아까 만들어주신 <code class="highlighter-rouge">classpath:ApplicationContext.xml</code>을 파라미터로 넣어 생성하고, <code class="highlighter-rouge">getBean</code> 메소드를 통하여 객체를 받아와서 사용할 수 있습니다.</p>
-</blockquote>
-
-<p>지금은 코드가 더 복잡해 보일 수 있습니다. 하지만 차후에 MVC 패턴을 배우다 보면 Bean 객체의 생성도 간략화 할 수 있는 기능들이 있습니다. 기초 먼저 쌓고 기술을 배우는 것이 가장 중요합니다.!! 그러면 코드 실행을 시켜서 객체를 생성하지 않아도 null값이 나오지 않고 제대로 구성되는지 확인해볼까요??</p>
-
-<p><img src="assets/images/spring/spring4_7.png" alt="오라클" /></p>
-
-<blockquote>
-  <p>코드가 정상적으로 실행되었습니다.</p>
+  <p>ApplicationContext.xml 에서 RegisterService 객체를 불러와서 join() 메소드를 호출하고 print() 메소드를 호출합니다.</p>
 </blockquote>
 
 <hr />
 
 <p><strong class="subtitle_fontAwesome">마무리</strong></p>
-<p>오늘은 순수 JAVA를 이용하여 Spring Container를 사용해보았습니다.<br />
-이러한 Bean 객체를 Spring Container에게 제어권을 넘겨서 여러가지 코딩을 하는 편인데요.<br />
-다음시간에는 어떻게 하면 객체들을 생성 할 때, 의존하는 객체들을 넘길 수 있을지 알아보도록 하죠.<br />
-말이 어려울 뿐이지 객체를 생성할 때 파라미터를 스프링으로 넘기는 방법이라고 보시면 됩니다.!! 그러면 다음시간에 뵐게요!!<br />
-여기까지 따라오느라 고생 많으셨습니다!!!!!!!!!!!!!!!!</p>
+<p>아주 간단하지만 복잡하게 느껴질 수 있는 DI(Dependecy Injection) 의존성 주입을 쉽게 배워보았습니다. Spring에 가장 많은 부분을 차지하고 있으며, 모든 것은 이 부분이 기초로 되어 나아가집니다.<br />
+저도 항상 구글링을 하는 사람으로써 언제나 남들의 글을 끝까지 보는 것은 아주 힘들다고 생각합니다. 기초가 없으신 분들은 이러한 힘든 작업 뿐 아니라 직접 따라하면서 제가 한 부분들을 스스로 해주셔야 자기의 것으로 만들어 지기 때문에 귀찮으시더라도 한번 쯤 해보는 습관들이시는 것 어떠세요?!!</p>
 
 <!-- 
 <code class="highlighter-rouge">GitHub Page</code>
@@ -677,14 +817,14 @@ exclude:
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/spring-num5">Spring 개발일지(5) - 의존성 주입(DI)</a></li>
-                                        
-                                    
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/spring-num4">Spring 개발일지(4) - 자바로 스프링 개발</a></li>
+                                        
                                     
                                   
                                 
@@ -734,55 +874,6 @@ exclude:
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/spring-num5">
-                <div class="post-card-image" style="background-image: url(/assets/images/spring.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-num5">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Spring</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Spring 개발일지(5) - 의존성 주입(DI)</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/junho.jpg" alt="김준호" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/libtv/">김준호</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -790,12 +881,12 @@ exclude:
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/spring-num3">
+            <a class="post-card-image-link" href="/spring-num4">
                 <div class="post-card-image" style="background-image: url(/assets/images/spring.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/spring-num3">
+            <a class="post-card-content-link" href="/spring-num4">
                 <header class="post-card-header">
                     
                         
@@ -805,7 +896,7 @@ exclude:
                         
                     
 
-                    <h2 class="post-card-title">Spring 개발일지(3) - 스프링 프로젝트 생성</h2>
+                    <h2 class="post-card-title">Spring 개발일지(4) - 자바로 스프링 개발</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -851,18 +942,18 @@ exclude:
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Spring 개발일지(4) - 자바로 스프링 개발</div>
+    <div class="floating-header-title">Spring 개발일지(5) - 의존성 주입(DI)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Spring+%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80%284%29+-+%EC%9E%90%EB%B0%94%EB%A1%9C+%EC%8A%A4%ED%94%84%EB%A7%81+%EA%B0%9C%EB%B0%9C&amp;url=https://libtv.github.io/spring-num4"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Spring+%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A7%80%285%29+-+%EC%9D%98%EC%A1%B4%EC%84%B1+%EC%A3%BC%EC%9E%85%28DI%29&amp;url=https://libtv.github.io/spring-num5"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://libtv.github.io/spring-num4"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://libtv.github.io/spring-num5"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
