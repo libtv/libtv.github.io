@@ -411,8 +411,7 @@ public class MainClass {
 </blockquote>
 
 <blockquote>
-  <p>그리고 만들어진 <code class="highlighter-rouge">ApplicationContext.xml</code>의 내용은 다음과 같이 작성해주세요!! <strong>복붙합시다</strong>
-<br /></p>
+  <p>그리고 만들어진 <code class="highlighter-rouge">ApplicationContext.xml</code>의 내용은 다음과 같이 작성해주세요!! <strong>복붙합시다</strong></p>
 </blockquote>
 
 <noscript><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -462,6 +461,48 @@ public class MainClass {
 
 <blockquote>
   <p>코드가 정상적으로 실행되었습니다.</p>
+</blockquote>
+
+<hr />
+
+<p><strong class="subtitle_fontAwesome">코드리뷰 및 요약</strong></p>
+
+<noscript><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+ 		
+ 		&lt;bean id=&quot;register&quot; class=&quot;test.Register&quot;&gt;&lt;/bean&gt;
+ 		
+ &lt;/beans&gt;</pre></noscript>
+<script src="https://gist.github.com/libtv/7dd72dbf19729dbf2eca87699860a287.js"> </script>
+
+<blockquote>
+  <p><code class="highlighter-rouge">XML</code>을 생성하고 <code class="highlighter-rouge">bean</code>에서 <code class="highlighter-rouge">id</code>와 <code class="highlighter-rouge">class</code>를 정의합니다.<br /></p>
+</blockquote>
+
+<p><br /></p>
+<noscript><pre>// 회원가입의 메인 클래스
+public class MainClass {
+
+	public static void main(String[] args) {
+		/* 주석 처리를 합니다.
+		Register register = new Register(); // Register 객체를 생성하고.
+		register.doRegister();				// 호출한다.
+		*/
+		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(&quot;classpath:ApplicationContext.xml&quot;);
+		
+		Register register = ctx.getBean(&quot;register&quot;, Register.class);
+		register.doRegister();
+		ctx.close();
+	}
+}</pre></noscript>
+<script src="https://gist.github.com/libtv/b63ccece00520b5a7a233a60783bd19f.js"> </script>
+
+<blockquote>
+  <p><code class="highlighter-rouge">GenericXmlApplicationContext</code>객체를 생성하고 <code class="highlighter-rouge">getBean</code>으로 <code class="highlighter-rouge">bean</code>객체를 받아옵니다.<br /></p>
 </blockquote>
 
 <hr />
@@ -681,6 +722,15 @@ exclude:
                                     
                                         
                                         
+                                            <li><a href="/spring-num6">Spring 개발일지(6) - 의존성 주입(DI) II</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/spring-num5">Spring 개발일지(5) - 의존성 주입(DI)</a></li>
                                         
                                     
@@ -703,8 +753,6 @@ exclude:
                                     
                                         
                                         
-                                            <li><a href="/spring-num2">Spring 개발일지(2) - 개발환경 구축</a></li>
-                                        
                                     
                                   
                                 
@@ -726,7 +774,7 @@ exclude:
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 4 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>

@@ -603,7 +603,37 @@ public class MainClass {
 <script src="https://gist.github.com/libtv/309bf280b26d6b7e883c8874b18d4e9d.js"> </script>
 
 <blockquote>
-  <p>ApplicationContext.xml 에서 RegisterService 객체를 불러와서 join() 메소드를 호출하고 print() 메소드를 호출합니다.</p>
+  <p>ApplicationContext.xml 에서 RegisterService 객체를 불러와서 join() 메소드를 호출하고 print() 메소드를 호출합니다.<br /></p>
+</blockquote>
+
+<hr />
+<p><strong class="subtitle_fontAwesome">코드리뷰 및 요약</strong></p>
+
+<noscript><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+ 		
+ 	&lt;bean id=&quot;registerDAO&quot; class=&quot;dao.RegisterDAO&quot;&gt;&lt;/bean&gt;
+ 	
+ 	&lt;bean id=&quot;registerService&quot; class=&quot;service.RegisterService&quot;&gt;
+		&lt;constructor-arg ref=&quot;registerDAO&quot;&gt;&lt;/constructor-arg&gt;	
+	&lt;/bean&gt;
+ 		
+ &lt;/beans&gt;</pre></noscript>
+<script src="https://gist.github.com/libtv/6772fe3dc2879c038843c034d2427f8a.js"> </script>
+
+<blockquote>
+  <p>생성된 bean 객체를 다른 bean 객체에 주입시키기 위하여 <code class="highlighter-rouge">constructor-arg</code>를 이용합니다.</p>
+</blockquote>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RegisterService</span><span class="o">(</span><span class="n">RegisterDAO</span> <span class="n">registerDAO</span><span class="o">)</span> <span class="o">{</span>
+   <span class="k">this</span><span class="o">.</span><span class="na">registerDAO</span> <span class="o">=</span> <span class="n">registerDAO</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="highlighter-rouge">생성자</code>에 DAO bean 객체를 주입합니다.</p>
 </blockquote>
 
 <hr />
@@ -818,6 +848,15 @@ exclude:
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/spring-num6">Spring 개발일지(6) - 의존성 주입(DI) II</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
                                   
                                 
                                   
@@ -842,8 +881,6 @@ exclude:
                                     
                                         
                                         
-                                            <li><a href="/spring-num2">Spring 개발일지(2) - 개발환경 구축</a></li>
-                                        
                                     
                                   
                                 
@@ -865,7 +902,7 @@ exclude:
                         <footer class="read-next-card-footer">
                             <a href="/tag/spring/">
                                 
-                                    See all 4 posts  →
+                                    See all 5 posts  →
                                 
                             </a>
                         </footer>
@@ -874,6 +911,55 @@ exclude:
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/spring-num6">
+                <div class="post-card-image" style="background-image: url(/assets/images/spring.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/spring-num6">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Spring</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Spring 개발일지(6) - 의존성 주입(DI) II</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/junho.jpg" alt="김준호" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/libtv/">김준호</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
