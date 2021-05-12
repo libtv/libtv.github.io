@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>Spring 개발일지(6) - 의존성 주입(DI) II</title>
+        <title>Spring 개발일지(6) - 의존 객체 주입 방법</title>
         
           <description>&lt;!--
    &lt; 준호가 이용할 태그 정리&gt;
@@ -654,6 +654,7 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num3&quot;&gt;Spring 개발일지(3) - 스프링 프로젝트 생성&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
