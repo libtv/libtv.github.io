@@ -357,7 +357,9 @@ exclude:
 
 <p><strong class="subtitle_fontAwesome"><a>생성자</a>를 이용한 의존 객체 주입</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RegisterService</span><span class="o">(</span><span class="n">RegisterDAO</span> <span class="n">registerDAO</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* RegisterService.java 파일입니다. */</span>
+<span class="cm">/* RegisterDAO 객체를 의존받고 있는 상황입니다. */</span>
+<span class="n">RegisterService</span><span class="o">(</span><span class="n">RegisterDAO</span> <span class="n">registerDAO</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">registerDAO</span> <span class="o">=</span> <span class="n">registerDAO</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -378,7 +380,9 @@ exclude:
 
 <p><strong class="subtitle_fontAwesome"><a>Setter()</a>를 이용한 의존 객체 주입</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUrl</span><span class="o">(</span><span class="n">String</span> <span class="n">jdbcUrl</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* DatabaseProperty.java 파일입니다. */</span>
+<span class="cm">/* 생략 */</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUrl</span><span class="o">(</span><span class="n">String</span> <span class="n">jdbcUrl</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">jdbcUrl</span> <span class="o">=</span> <span class="n">jdbcUrl</span><span class="o">;</span>
 <span class="o">}</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserId</span><span class="o">(</span><span class="n">String</span> <span class="n">userId</span><span class="o">)</span> <span class="o">{</span>
@@ -403,7 +407,9 @@ exclude:
 
 <p><strong class="subtitle_fontAwesome"><a>List</a>객체를 이용한 의존 객체 주입</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUserInfo</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">jdbcUserInfo</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* DatabaseProperty2.java 파일입니다. */</span>
+<span class="cm">/* 생략 */</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUserInfo</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">jdbcUserInfo</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">jdbcUserInfo</span> <span class="o">=</span> <span class="n">jdbcUserInfo</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -427,7 +433,9 @@ exclude:
 
 <p><strong class="subtitle_fontAwesome"><a>Map</a>객체를 이용한 의존 객체 주입</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUserInfo</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">jdbcUserInfo</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* DatabaseProperty3.java 파일입니다. */</span>
+<span class="cm">/* 생략 */</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setJdbcUserInfo</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">jdbcUserInfo</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">jdbcUserInfo</span> <span class="o">=</span> <span class="n">jdbcUserInfo</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>

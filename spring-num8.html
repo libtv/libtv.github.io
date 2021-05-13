@@ -348,7 +348,8 @@ exclude:
 
 <p><strong class="subtitle_fontAwesome">@Qualifier</strong></p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">&lt;!--... 생략 --&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- ApplicaionContext.xml 파일입니다. --&gt;</span>
+    <span class="c">&lt;!--... 생략 --&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO1"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO2"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
@@ -361,7 +362,8 @@ exclude:
 그래서 여러개의 같은 클래스를 식별하기 위해서는 아래와 같은 <code class="highlighter-rouge">@Qualifier</code> 작업이 필요합니다.</p>
 </blockquote>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">&lt;!--... 생략 --&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- ApplicaionContext.xml 파일입니다. --&gt;</span>
+    <span class="c">&lt;!--... 생략 --&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;</span>
      <span class="nt">&lt;qualifier</span> <span class="na">value=</span><span class="s">"firstRegDao"</span><span class="nt">&gt;&lt;/qualifier&gt;</span>
     <span class="nt">&lt;/bean&gt;</span>
@@ -394,7 +396,8 @@ exclude:
 하지만 개발자 분들은 많이 <code class="highlighter-rouge">Autowired</code> 혹은 <code class="highlighter-rouge">Resource</code>로 넘어가고 있는 추세이고 <code class="highlighter-rouge">Inject</code>를 많이 사용하지 않는 것 같습니다.. (저만의 뇌피셜..) <br />
 이것도 Resource와 같이 <code class="highlighter-rouge">id</code>로 식별할 수 있는데 식별하기 위해서는 <code class="highlighter-rouge">@named</code> 어노테이션을 사용합니다. 사용법은 다음과 같습니다.</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c">&lt;!--... 생략 --&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- ApplicaionContext.xml 파일입니다. --&gt;</span>
+    <span class="c">&lt;!--... 생략 --&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO1"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
     <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"registerDAO2"</span> <span class="na">class=</span><span class="s">"dao.RegisterDAO"</span><span class="nt">&gt;&lt;/bean&gt;</span>
