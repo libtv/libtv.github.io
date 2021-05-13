@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/spring/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-05-13T22:08:40+09:00</updated>
+  <updated>2021-05-13T22:52:10+09:00</updated>
   <id>http://localhost:4000/tag/spring/feed.xml</id>
 
   
@@ -32,8 +32,379 @@
 
   
     <entry>
-      <title type="html">Spring 개발일지(7) - 의존객체 자동 주입</title>
-      <link href="http://localhost:4000/spring-num7" rel="alternate" type="text/html" title="Spring 개발일지(7) - 의존객체 자동 주입" />
+      <title type="html">Spring 개발일지(8) - 의존 객체의 선택</title>
+      <link href="http://localhost:4000/spring-num8" rel="alternate" type="text/html" title="Spring 개발일지(8) - 의존 객체의 선택" />
+      <published>2021-05-13T00:40:00+09:00</published>
+      <updated>2021-05-13T00:40:00+09:00</updated>
+      <id>http://localhost:4000/spring-num8</id>
+      <content type="html" xml:base="http://localhost:4000/spring-num8">&lt;!--
+   &lt; 준호가 이용할 태그 정리&gt;
+   &lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;                    : 어떠한 문장이나 단어를 하이라이트 할 때 사용합니다.
+   &lt;a target=&quot;_blank&quot;&gt; &lt;/a&gt;                                    : a 태그를 이용하여 문서를 이동하는데 사용합니다.
+   &lt;p&gt;&lt;strong  class=&quot;subtitle_fontAwesome&quot;&gt; &lt;/strong&gt;&lt;/p&gt;     : 주제를 기록할 때 사용합니다.
+   &gt;                                                           : 설명할 때 사용합니다.
+   &gt;  ** **                                                    : 코드를 적어야 하는 경우 사용합니다.
+   &lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: &amp;#39;en-uk&amp;#39;
+words_per_minute: 200
+
+# edit baseurl to simply &amp;#39;/&amp;#39; if using as your personal page (instead of a project page)
+baseurl: /
+
+# Website info
+title: 웹 개발자, 김준호의 블로그
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+CNAME: #add cname for website to be created
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if &amp;#39;True&amp;#39; the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter:  # replace by your username
+facebook:  # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors&amp;#39; info in `_data/authors.yml`
+# Tags&amp;#39; info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author&amp;#39;s page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post&amp;#39;s page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for building master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV[&amp;#39;GIT_NAME&amp;#39;] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to &amp;quot;source&amp;quot; for USERNAME.github.io
+# or &amp;quot;master&amp;quot; otherwise
+safe: False
+lsi: False
+username: libtv
+repo: libtv.github.io
+branch: master
+relative_source: 
+destination: ../jasper2-pages/
+production_url:  https://libtv.github.io/
+source_url:  https://github.com/libtv/libtv.github.io/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - &amp;quot;*.Rmd&amp;quot;
+  - .git*
+  - backup
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/libtv/b04c361f69890ed6927fbfaddabaf612.js&quot;&gt; &lt;/script&gt;           : gist 코드입니다.
+   ![name](assets/images/spring/spring1_1.png)                 : image를 삽입하는 코드입니다.
+ --&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Spring 개발일지는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num1&quot;&gt;Spring 개발일지(1) - 기본적인 상식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num2&quot;&gt;Spring 개발일지(2) - 개발환경 구축&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num3&quot;&gt;Spring 개발일지(3) - 스프링 프로젝트 생성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;설명하기에 앞서&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;안녕하세요. 풀스택 개발자를 위해 달려나가는 &lt;a target=&quot;_blank&quot;&gt;김준호&lt;/a&gt; 입니다.
+&lt;br /&gt;저번 시간에는 
+자동적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;Spring DI(Dependecy Injection)&lt;/code&gt;주입하는 방법에 대해 알아보았습니다..&lt;br /&gt;
+오늘은 주입 객체가 동일한 것이 여러개 일 때 선택하는 방법에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;자동 주입 선택&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;우리는 의존하는 객체를 자동으로 주입할 때 @AutoWired와 @Resource를 배웠습니다. &lt;br /&gt;
+@AutoWired에서는 식별을 Class로 한다고 하였는데 하나의 클래스를 여러개의 빈으로 생성한다면 당연히 스프링에서는 에러가 뜨게 되겠죠.&lt;br /&gt;
+이것을 해결하는 방법은 아래 2가지 종류로 제안하고 있습니다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@Qualifier&lt;/code&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@Inject&lt;/code&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;@Qualifier&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerService&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service.RegisterService&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;우리가 만약 여러개의 bean 객체를 생성하고 그 bean 객체를 &lt;code class=&quot;highlighter-rouge&quot;&gt;AutoWired&lt;/code&gt;로 넣는다고 가정해봅시다. 이 처리는 당연하게 에러가 나오게 됩니다.&lt;br /&gt;
+그래서 여러개의 같은 클래스를 식별하기 위해서는 아래와 같은 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Qualifier&lt;/code&gt; 작업이 필요합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;qualifier&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;firstRegDao&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/qualifier&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerService&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service.RegisterService&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;cm&quot;&gt;/* RegisterService.java 파일입니다. */&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Autowired&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Qualifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;firstRegDao&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;RegisterDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;registerDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+&lt;span class=&quot;c1&quot;&gt;//	/* Autowired로 주석 처리 */&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	RegisterService(RegisterDAO registerDAO) {&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//		this.registerDAO = registerDAO;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;이렇게 하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Qualifier&lt;/code&gt; 를 통하여 하나의 클래스를 여러 개의 빈으로 생성하여도 식별할 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;@Inject&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@Inject&lt;/code&gt; 속성은 사실 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Autowired&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Resource&lt;/code&gt;나 마찬가지로 자동 주입을 위한 어노테이션입니다. &lt;br /&gt;
+하지만 개발자 분들은 많이 &lt;code class=&quot;highlighter-rouge&quot;&gt;Autowired&lt;/code&gt; 혹은 &lt;code class=&quot;highlighter-rouge&quot;&gt;Resource&lt;/code&gt;로 넘어가고 있는 추세이고 &lt;code class=&quot;highlighter-rouge&quot;&gt;Inject&lt;/code&gt;를 많이 사용하지 않는 것 같습니다.. (저만의 뇌피셜..) &lt;br /&gt;
+이것도 Resource와 같이 &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;로 식별할 수 있는데 식별하기 위해서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;@named&lt;/code&gt; 어노테이션을 사용합니다. 사용법은 다음과 같습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dao.RegisterDAO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--... 생략 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;bean&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerService&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;service.RegisterService&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;우리가 만약 여러개의 bean 객체를 생성하고 그 bean 객체를 &lt;code class=&quot;highlighter-rouge&quot;&gt;Inject&lt;/code&gt; 넣는다고 가정해봅시다. 이 처리는 당연하게 에러가 나오게 됩니다.&lt;br /&gt;
+그래서 여러개의 같은 클래스를 식별하기 위해서는 아래와 같은 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Named&lt;/code&gt; 작업이 필요합니다. 
+@Named 는 xml &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;를 가져오기 때문에 xml에서의 추가적인 작업은 필요없습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;cm&quot;&gt;/* RegisterService.java 파일입니다. */&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Inject&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Named&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;registerDAO&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;RegisterDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;registerDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    
+&lt;span class=&quot;c1&quot;&gt;//	/* Autowired로 주석 처리 */&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	RegisterService(RegisterDAO registerDAO) {&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//		this.registerDAO = registerDAO;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//	&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;이렇게 하면 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Inject&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;@named&lt;/code&gt; 를 통하여 하나의 클래스를 여러 개의 빈으로 생성하여도 식별할 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;마무리&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;기본적인 spring 단계는 끝난 것 같습니다. 다음 시간부터는 간단한 MVC 웹 프로젝트를 만들어보겠습니다. 이러한 Spring Container를 기반이 기초로 있어야지 MVC 웹 프로젝트를 어렵지 않게
+수행할 수 있습니다. 지금까지 했던 내용들을 다시 머리 속으로 잘 정리하고 있으시길 바라겠습니다.!!&lt;/p&gt;
+
+&lt;!-- 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub Page&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rouge&lt;/code&gt;
+--&gt;
+&lt;!--
+&lt;p&gt;자 이제 &lt;code class=&quot;highlighter-rouge&quot;&gt;C:/blogmaker/assets/css/syntax.css&lt;/code&gt; 파일이 생성되었습니다.&lt;/p&gt;
+
+이 글은 python basic 입니다.!!
+~~~javascript
+function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+~~~
+
+&lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: &amp;#39;en-uk&amp;#39;
+words_per_minute: 200
+
+# edit baseurl to simply &amp;#39;/&amp;#39; if using as your personal page (instead of a project page)
+baseurl: /
+
+# Website info
+title: 웹 개발자, 김준호의 블로그
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+CNAME: #add cname for website to be created
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if &amp;#39;True&amp;#39; the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter:  # replace by your username
+facebook:  # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors&amp;#39; info in `_data/authors.yml`
+# Tags&amp;#39; info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author&amp;#39;s page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post&amp;#39;s page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for building master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV[&amp;#39;GIT_NAME&amp;#39;] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to &amp;quot;source&amp;quot; for USERNAME.github.io
+# or &amp;quot;master&amp;quot; otherwise
+safe: False
+lsi: False
+username: libtv
+repo: libtv.github.io
+branch: master
+relative_source: 
+destination: ../jasper2-pages/
+production_url:  https://libtv.github.io/
+source_url:  https://github.com/libtv/libtv.github.io/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - &amp;quot;*.Rmd&amp;quot;
+  - .git*
+  - backup
+&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/libtv/b04c361f69890ed6927fbfaddabaf612.js&quot;&gt; &lt;/script&gt; 
+--&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>김준호</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Spring 개발일지(7) - 의존 객체 자동 주입</title>
+      <link href="http://localhost:4000/spring-num7" rel="alternate" type="text/html" title="Spring 개발일지(7) - 의존 객체 자동 주입" />
       <published>2021-05-12T00:40:00+09:00</published>
       <updated>2021-05-12T00:40:00+09:00</updated>
       <id>http://localhost:4000/spring-num7</id>
@@ -152,7 +523,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -263,7 +635,7 @@ exclude:
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;마무리&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;다음은 의존객체의 선택에 대해 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;다음은 c에 대해 알아보겠습니다.&lt;/p&gt;
 
 &lt;!-- 
 &lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub Page&lt;/code&gt;
@@ -526,7 +898,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -609,7 +982,7 @@ exclude:
 
 &lt;p&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;&lt;a&gt;List&lt;/a&gt;객체를 이용한 의존 객체 주입&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setJdbcUserInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatabaseProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jdbcUserInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setJdbcUserInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jdbcUserInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jdbcUserInfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jdbcUserInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -934,7 +1307,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1520,7 +1894,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1978,7 +2353,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -2370,7 +2746,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -2674,7 +3051,8 @@ exclude:
     &lt;li&gt;&lt;a href=&quot;./spring-num4&quot;&gt;Spring 개발일지(4) - 자바로 스프링 개발&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num5&quot;&gt;Spring 개발일지(5) - 의존성 주입(DI)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./spring-num6&quot;&gt;Spring 개발일지(6) - 의존 객체 주입 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num7&quot;&gt;Spring 개발일지(7) - 의존 객체 자동 주입&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./spring-num8&quot;&gt;Spring 개발일지(8) - 의존 객체의 선택&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -2850,7 +3228,7 @@ exclude:
       
 
       
-        <summary type="html">Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) Spring 개발일지(6) - 의존 객체 주입 방법 Spring 개발일지(7) - 의존객체 자동 주입 스프링 프레임워크 스프링 프레임워크 (“영어”): Spring Framework)는 자바 플랫폼을 위한 오픈 소스 애플리케이션 프레임워크로서 간단히 스프링(Spring)이라고도 한다. 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공하고 있다. 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준프레임워크의 기반 기술로서 쓰이고 있다.</summary>
+        <summary type="html">Spring 개발일지는 여러 절로 구성되어 있습니다. Spring 개발일지(1) - 기본적인 상식 Spring 개발일지(2) - 개발환경 구축 Spring 개발일지(3) - 스프링 프로젝트 생성 Spring 개발일지(4) - 자바로 스프링 개발 Spring 개발일지(5) - 의존성 주입(DI) Spring 개발일지(6) - 의존 객체 주입 방법 Spring 개발일지(7) - 의존 객체 자동 주입 Spring 개발일지(8) - 의존 객체의 선택 스프링 프레임워크 스프링 프레임워크 (“영어”): Spring Framework)는 자바 플랫폼을 위한 오픈 소스 애플리케이션 프레임워크로서 간단히 스프링(Spring)이라고도 한다. 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공하고 있다. 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준프레임워크의 기반 기술로서 쓰이고 있다.</summary>
       
 
       
